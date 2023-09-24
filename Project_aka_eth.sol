@@ -28,7 +28,7 @@ contract Atm {
 
     mapping(address => uint )public Total_Balance;
 
-    // mint function
+    // deposit function
 
     function desposit (address _address,uint _value) public 
     {
@@ -36,7 +36,7 @@ contract Atm {
        Total_Balance[_address] += _value;
     }
 
-    // burn function
+    // withdraw function
      function withdraw (address _address,uint _value) public 
     {
         if(Total_Balance[_address] >= _value)
